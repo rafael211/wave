@@ -1,0 +1,156 @@
+/* =========================
+   FONTE
+========================= */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+/* =========================
+   RESET BÁSICO
+========================= */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* =========================
+   BASE GLOBAL
+========================= */
+body {
+  background-color: #121212;
+  color: #ffffff;
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
+}
+
+/* =========================
+   HEADER / NAV
+========================= */
+header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  padding: 16px 0;
+  text-align: center;
+}
+
+nav a {
+  color: #9e9e9e;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+nav a:hover {
+  color: #ffffff;
+}
+
+/* =========================
+   MAIN / HERO
+========================= */
+main {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 24px;
+}
+
+.hero {
+  width: 100%;
+  max-width: 640px;
+  text-align: center;
+}
+
+/* =========================
+   TIPOGRAFIA
+========================= */
+h1 {
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+h2 {
+  font-size: 18px;
+  font-weight: 400;
+  color: #b3b3b3;
+  margin-bottom: 32px;
+}
+
+h3 {
+  font-size: 13px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #b3b3b3;
+  margin-bottom: 12px; /* ajuste fino aqui */
+}
+
+/* =========================
+   FORMULÁRIO
+========================= */
+form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+/* Esconde label visualmente (mantém acessibilidade) */
+label {
+  position: absolute;
+  left: -9999px;
+}
+
+input[type="search"] {
+  width: 360px;
+  padding: 13px 18px;
+  max-width: 420px;
+  border-radius: 999px;
+  border: none;
+  font-size: 15px;
+  outline: none;
+}
+
+input[type="search"]:focus {
+  box-shadow: 0 0 0 2px #1db954;
+}
+
+button {
+  padding: 13px 26px;
+  border-radius: 999px;
+  border: none;
+  background-color: #1db954;
+  color: #000000;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #1ed760;
+  transform: scale(1.05);
+}
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 32px;
+  }
+
+  h2 {
+    font-size: 16px;
+  }
+
+  form {
+    flex-direction: column;
+  }
+
+  input[type="search"],
+  button {
+    width: 100%;
+  }
+}
+
