@@ -24,23 +24,21 @@ body {
 body::before {
   content: "";
   position: fixed;
-  inset: -30%;
+  inset: 0;
   z-index: -1;
 
   background:
     radial-gradient(
       ellipse at 50% 100%,
-      rgba(15, 122, 56, 0.32) 0%,
-      rgba(15, 122, 56, 0.22) 25%,
-      rgba(15, 122, 56, 0.12) 45%,
-      rgba(15, 122, 56, 0.04) 65%,
-      transparent 80%
+      rgba(4, 63, 153, 0.35) 0%,
+      rgba(3, 56, 100, 0.22) 30%,
+      rgba(3, 57, 100, 0.12) 55%,
+      transparent 75%
     ),
     linear-gradient(
       180deg,
       #0a0a0a 0%,
-      #0e0e0e 35%,
-      #121212 65%,
+      #0e0e0e 40%,
       #121212 100%
     );
 }
@@ -240,7 +238,7 @@ button:hover {
     circle,
     rgba(15, 122, 56, 0.28) 0%,
     rgba(15, 122, 56, 0.18) 35%,
-    rgba(15, 122, 56, 0.08) 55%,
+    rgba(3, 82, 146, 0.08) 55%,
     rgba(15, 122, 56, 0) 72%
   );
 
@@ -504,5 +502,44 @@ button:hover {
 }
 .app {
   margin-left: 220px;
-  min-height: 100vh;
+  min-height: 100vh; 
+}
+.logo {
+  width: 44px;
+  height: 44px;
+  border-radius: 60%;
+  background: #0a0a0a;
+  position: relative;
+  transform: rotate(140deg);
+  display: flex;
+  justify-content: center; /* corrigido */
+  align-items: center;
+}
+
+/* sobe levemente o símbolo */
+.logo-icon {
+  transform: translateY(-6px);
+}
+
+/* ondas */
+.logo-wave {
+  position: absolute;
+  width: 70%;
+  height: 60%;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-top-color: #1e90ff; /* azul */
+}
+
+/* variações */
+.wave-1 {
+  transform: scale(1);
+}
+
+.wave-2 {
+  transform: scale(1.75);
+}
+
+.wave-3 {
+  transform: scale(0.5);
 }
